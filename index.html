@@ -100,7 +100,8 @@ p{margin:0}
 .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--carmim)}
 .hero h1{font-size:clamp(42px,5.3vw,96px);line-height:.98;letter-spacing:-.04em}
 .hero h1 span{display:block;white-space:nowrap}
-.hero h1 .l2{color:var(--soft);font-weight:500;padding-left:.45em}
+.hero h1 span span{display:inline;white-space:normal}
+.hero h1 .l2{color:var(--soft);font-weight:500}
 .hero h1 .l3{color:var(--carmim)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
 /* hero com vídeo de fundo */
@@ -498,10 +499,22 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
 .band-ill{height:auto;background:var(--navy)}
 .band-ill img{height:auto;max-height:320px;object-fit:contain;width:100%;background:var(--navy)}
 
+/* ===== v7: hero em duas linhas + botão coração ===== */
+@media(max-width:819px){.hero h1 span span{display:block}
+  .hero h1{font-size:clamp(30px,9.5vw,52px)}}
+
+.wa{overflow:visible}
+.wa .lbl{position:absolute;right:calc(100% + 12px);white-space:nowrap;background:var(--navy);color:#fff;font:600 11px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:11px 14px;border-radius:3px;opacity:0;translate:6px 0;pointer-events:none;transition:opacity var(--dur-quick) var(--ease-out),translate var(--dur-quick) var(--ease-out)}
+.wa:hover .lbl,.wa:focus-visible .lbl{opacity:1;translate:0 0}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--carmim);opacity:0;pointer-events:none;animation:wa-ring 2.4s var(--ease-out) infinite}
+.wa svg{animation:beat 2.4s var(--ease-out) infinite}
+@keyframes beat{0%,30%,100%{scale:1}8%{scale:1.2}16%{scale:1.04}23%{scale:1.13}}
+@keyframes wa-ring{0%{opacity:.45;scale:1}70%,100%{opacity:0;scale:1.95}}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .sr,.stagger>*,.band,.band img,.team-band img,.medicos .bgimg img{animation:none!important}
-  .curve .sweep,.ticker-track{animation:none!important}
+  .curve .sweep,.ticker-track,.wa svg,.wa::after{animation:none!important}
   .curve .sweep{display:none}
 }
 </style>
@@ -750,10 +763,8 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
   <div class="hero-main">
     <div class="hero-eyebrow label rv"><span class="dot"></span>Hemodinâmica · Rede Mater Dei</div>
     <h1>
-      <span class="rv d1">Tratamos</span>
-      <span class="rv d2">o coração</span>
-      <span class="l2 rv d2">por dentro</span>
-      <span class="l3 rv d3">das artérias.</span>
+      <span class="rv d1">Tratamos o coração</span>
+      <span class="rv d2"><span class="l2">por dentro</span> <span class="l3">das artérias.</span></span>
     </h1>
     <p class="hero-lead fd d3">Cateterismo, angioplastia, TAVI e outros procedimentos por cateter nos hospitais Mater Dei de Belo Horizonte. Desde 2014.</p>
     <div class="hero-cta fd d4">
@@ -1112,7 +1123,8 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
 
 <div class="wa-bar" id="wa-bar" aria-hidden="true"><a class="btn btn-red" data-wa="paciente" href="https://wa.me/5531971364667" tabindex="-1"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>Falar com a equipe no WhatsApp</a></div>
 <a class="wa" data-wa="paciente" href="https://wa.me/5531971364667" aria-label="Falar pelo WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.7-1.3a.4.4 0 000-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+  <span class="lbl" aria-hidden="true">Falar no WhatsApp</span>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 </a>
 
 <script>
