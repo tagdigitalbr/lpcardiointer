@@ -511,6 +511,15 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
 @keyframes beat{0%,30%,100%{scale:1}8%{scale:1.2}16%{scale:1.04}23%{scale:1.13}}
 @keyframes wa-ring{0%{opacity:.45;scale:1}70%,100%{opacity:0;scale:1.95}}
 
+/* ===== v8: cards sem foto ===== */
+.fecho{margin-top:40px;font-size:18px;color:var(--grafite);max-width:52ch}
+.mais{margin:56px 0 64px}
+.mais>.label{display:block;margin-bottom:20px}
+.mais-grid{display:grid;gap:20px}
+@media(min-width:720px){.mais-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1180px){.mais-grid{grid-template-columns:repeat(3,1fr)}}
+.mais .card h3{font-size:19px;margin-bottom:10px}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .sr,.stagger>*,.band,.band img,.team-band img,.medicos .bgimg img{animation:none!important}
@@ -689,7 +698,7 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
      "name": "O exame é feito pelo braço ou pela virilha?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sempre que possível, pelo punho (artéria radial). Essa via tem menos risco de sangramento. Em alguns casos, como na TAVI, a virilha é necessária por causa do tamanho do material."
+      "text": "Sempre que possível, pelo punho (artéria radial). Essa via tem menos risco de sangramento e permite que você se levante mais cedo. Em alguns casos, como na TAVI, a virilha é necessária por causa do tamanho do material."
      }
     },
     {
@@ -705,7 +714,7 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
      "name": "E a radiação?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Os angiógrafos são de última geração, com protocolos pensados para garantir a melhor imagem com a menor incidência de radiação."
+      "text": "Nossos angiógrafos são de última geração e trabalham com protocolos de baixa dose. O objetivo é sempre a melhor imagem com a menor radiação possível, para você e para a equipe."
      }
     },
     {
@@ -713,7 +722,15 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
      "name": "Quem me explica o preparo?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Um dos médicos da equipe, os mesmos que fazem o procedimento. Mande uma mensagem pelo WhatsApp e a gente combina o melhor horário para conversar."
+      "text": "Um dos médicos da equipe, os mesmos que fazem o procedimento. Mande uma mensagem pelo WhatsApp e combinamos o melhor horário para conversar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Em qual unidade vou fazer o exame?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Na unidade Mater Dei que for mais conveniente para você: Contorno, Santo Agostinho, Betim-Contagem ou Nova Lima. A equipe é a mesma em todas."
      }
     }
    ]
@@ -794,11 +811,54 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
 <!-- ESTRUTURA -->
 <section class="sec bt" id="sala">
   <div class="wrap">
-    <div class="sala-top">
     <div class="sec-head sr">
       <span class="label">Estrutura</span>
-      <h2>Quatro laboratórios de hemodinâmica <span class="dim">para todo perfil de paciente.</span></h2>
-      <p>A equipe atende nos hospitais Mater Dei Contorno, Santo Agostinho, Betim-Contagem e Nova Lima. São quatro laboratórios equipados para procedimentos de alta complexidade, do exame diagnóstico ao tratamento por cateter.</p>
+      <h2>Quatro unidades. <span class="dim">Um só padrão de cuidado.</span></h2>
+      <p>A CardioInterv está em quatro hospitais da rede Mater Dei, em Belo Horizonte e região metropolitana. Cada laboratório de hemodinâmica tem estrutura completa e a mesma equipe por trás. Assim, o paciente é atendido perto de casa, seja num exame programado, seja numa urgência, sem abrir mão da qualidade.</p>
+    </div>
+
+    <div class="facts sr">
+      <div class="fact"><b>12 anos</b><span>de equipe, desde 2014</span></div>
+      <div class="fact"><b>4 unidades</b><span>Contorno, Santo Agostinho, Betim-Contagem e Nova Lima</span></div>
+      <div class="fact"><b>85–100</b><span>atendimentos por mês</span></div>
+      <div class="fact"><b>28</b><span>procedimentos diferentes, do diagnóstico ao tratamento por cateter</span></div>
+    </div>
+
+    <div class="sala">
+      <ul class="sala-list stagger">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+          <div><h3>Angiógrafos de última geração</h3><p>Equipamentos modernos, com protocolos pensados para garantir a melhor imagem com a menor dose de radiação possível. Mais segurança para o paciente e para a equipe, com imagens nítidas para decidir e tratar no mesmo procedimento.</p></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
+          <div><h3>Imagem e fisiologia dentro da artéria</h3><p>Quando a angiografia não basta, usamos IVUS, OCT e FFR. Esses exames mostram o tamanho real do vaso e se a obstrução de fato prejudica o fluxo. O stent só entra quando é necessário, e no tamanho certo.</p></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 21v-6a5 5 0 0110 0v6"/><path d="M9 11V5a3 3 0 016 0v6"/></svg>
+          <div><h3>Pelo punho, sempre que possível</h3><p>Preferimos a via radial, pelo punho. O risco de sangramento é menor, o paciente se levanta mais cedo e a recuperação é mais confortável.</p></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <div><h3>Ambiente pensado para o paciente</h3><p>Quem chega para um exame do coração costuma estar ansioso. Por isso a equipe explica cada etapa antes de começar, e o ambiente da sala é preparado para trazer mais tranquilidade.</p></div></li>
+      </ul>
+      <div class="rooms-wrap sr">
+        <span class="label" style="display:block;margin-bottom:14px">Conheça nossas salas</span>
+        <div class="rooms" data-carousel aria-label="Laboratórios de hemodinâmica">
+          <figure><img src="assets/sala-hibrida.webp" alt="Laboratório de hemodinâmica do Mater Dei Contorno, com angiógrafo, mesa e monitores" width="1800" height="1198" loading="lazy"><figcaption>Mater Dei Contorno · laboratório de hemodinâmica</figcaption></figure>
+          <figure><img src="assets/sala-comando.webp" alt="Sala de comando com monitores de angiografia e vista para o laboratório" width="1400" height="932" loading="lazy"><figcaption>Mater Dei Contorno · sala de comando</figcaption></figure>
+          <figure><img src="assets/sala-angulo.webp" alt="Outro ângulo do laboratório de hemodinâmica, com o angiógrafo e a mesa de exame" width="705" height="469" loading="lazy"><figcaption>Mater Dei Contorno · mesa e angiógrafo</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<figure class="band band-ill">
+  <img src="assets/faixa-hemodinamica.webp" alt="Desenho de um laboratório de hemodinâmica: arco em C do angiógrafo, mesa de exame e monitores" width="1600" height="687" loading="lazy">
+</figure>
+
+<!-- PROCEDIMENTOS -->
+<section class="sec bt bg-mist" id="procedimentos">
+  <div class="wrap">
+    <div class="sala-top">
+    <div class="sec-head sr">
+      <span class="label">Procedimentos</span>
+      <h2>Do cateterismo à troca de valva, <span class="dim">tudo por cateter.</span></h2>
+      <p>Fazemos 28 procedimentos diferentes, de exames diagnósticos a tratamentos que antes exigiam abrir o tórax. Estes três são os que mais nos procuram.</p>
     </div>
   <div class="curve-card sr">
     <span class="marker" style="top:-3px;left:-3px" aria-hidden="true"></span>
@@ -819,51 +879,13 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
   </div>
     </div>
 
-    <div class="facts sr">
-      <div class="fact"><b>12 anos</b><span>de equipe, desde a abertura do Mater Dei Contorno em 2014</span></div>
-      <div class="fact"><b>4</b><span>unidades do Hospital Mater Dei com atendimento da equipe</span></div>
-      <div class="fact"><b>85–100</b><span>atendimentos por mês</span></div>
-      <div class="fact"><b>28</b><span>procedimentos diferentes, do diagnóstico ao tratamento por cateter</span></div>
-    </div>
-
-    <div class="sala">
-      <ul class="sala-list stagger">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
-          <div><h3>Angiógrafos de última geração</h3><p>Protocolos pensados para garantir a melhor imagem com a menor incidência de radiação.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 21v-6a5 5 0 0110 0v6"/><path d="M9 11V5a3 3 0 016 0v6"/></svg>
-          <div><h3>Pelo punho, sempre que possível</h3><p>Preferimos a via radial, no punho, porque o risco de sangramento é menor do que pela virilha.</p></div></li>
-      </ul>
-      <div class="rooms-wrap sr">
-        <div class="rooms" data-carousel aria-label="Laboratórios de hemodinâmica">
-          <figure><img src="assets/sala-hibrida.webp" alt="Laboratório de hemodinâmica do Mater Dei Contorno, com angiógrafo, mesa e monitores" width="1800" height="1198" loading="lazy"><figcaption>Mater Dei Contorno · laboratório de hemodinâmica</figcaption></figure>
-          <figure><img src="assets/sala-comando.webp" alt="Sala de comando com monitores de angiografia e vista para o laboratório" width="1400" height="932" loading="lazy"><figcaption>Mater Dei Contorno · sala de comando</figcaption></figure>
-          <figure><img src="assets/sala-angulo.webp" alt="Outro ângulo do laboratório de hemodinâmica, com o angiógrafo e a mesa de exame" width="705" height="469" loading="lazy"><figcaption>Mater Dei Contorno · mesa e angiógrafo</figcaption></figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<figure class="band band-ill">
-  <img src="assets/faixa-hemodinamica.webp" alt="Desenho de um laboratório de hemodinâmica: arco em C do angiógrafo, mesa de exame e monitores" width="1600" height="687" loading="lazy">
-</figure>
-
-<!-- PROCEDIMENTOS -->
-<section class="sec bt bg-mist" id="procedimentos">
-  <div class="wrap">
-    <div class="sec-head sr">
-      <span class="label">Procedimentos</span>
-      <h2>Do cateterismo à troca de valva, <span class="dim">tudo por cateter.</span></h2>
-      <p>Fazemos 28 procedimentos diferentes, de exames diagnósticos a tratamentos que antes exigiam abrir o tórax. Estes três são os que mais nos procuram.</p>
-    </div>
-
     <div class="feat-wrap"><div class="feat stagger carousel" data-carousel aria-label="Procedimentos mais procurados">
       <article class="card">
         <div class="shot"><img src="assets/card-cateterismo.webp" alt="Ilustração: cateter percorrendo a artéria do punho até as coronárias" width="900" height="562" loading="lazy"></div>
         <div class="body">
         <span class="label">Diagnóstico</span>
         <h3>Cateterismo cardíaco</h3>
-        <p>O nome técnico é coronariografia. Um cateter fino chega às artérias do coração e o contraste mostra, em imagem, onde há obstrução e de que tamanho.</p>
+        <p>O exame que mostra, com contraste, onde estão as obstruções nas artérias do coração. Na maioria das vezes é feito pelo punho, com o paciente acordado e sedado.</p>
         <span class="tag">Coronariografia</span>
         </div>
       </article>
@@ -872,7 +894,7 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
         <div class="body">
         <span class="label">Tratamento</span>
         <h3>Angioplastia com stent</h3>
-        <p>Um balão abre a artéria entupida e um stent, uma pequena malha de metal, fica no lugar para manter o sangue passando. Muitas vezes é feita no mesmo procedimento do cateterismo.</p>
+        <p>O tratamento que abre a artéria com um balão e deixa um stent no lugar para mantê-la aberta. Quando o cateterismo encontra uma obstrução importante, os dois podem acontecer no mesmo procedimento.</p>
         <span class="tag">Angioplastia coronária</span>
         </div>
       </article>
@@ -881,11 +903,37 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
         <div class="body">
         <span class="label">Tratamento</span>
         <h3>TAVI</h3>
-        <p>Troca da valva aórtica por cateter, sem cirurgia de peito aberto. A nova valva é levada até o coração por uma artéria e encaixada dentro da valva doente.</p>
+        <p>A troca da válvula aórtica por cateter, sem abrir o peito. Indicada principalmente para pacientes com estenose aórtica e risco cirúrgico mais alto, com recuperação bem mais rápida que a cirurgia convencional.</p>
         <span class="tag">Implante transcateter de valva aórtica</span>
         </div>
       </article>
     </div></div>
+
+    <div class="mais">
+      <span class="label">Também fazemos</span>
+      <div class="mais-grid stagger">
+        <article class="card"><div class="body">
+          <h3>Terapia borda-a-borda da válvula mitral</h3>
+          <p>Tratamento por cateter para a insuficiência mitral, quando a válvula não fecha direito e o sangue volta. Um pequeno clipe une as bordas da válvula e reduz o vazamento, sem abrir o peito. Indicado principalmente para quem tem risco cirúrgico alto.</p>
+        </div></article>
+        <article class="card"><div class="body">
+          <h3>Valvoplastia mitral por balão</h3>
+          <p>Para a estenose mitral, quando a válvula está estreitada. Um balão levado por cateter abre a válvula por dentro e melhora a passagem do sangue, com recuperação rápida.</p>
+        </div></article>
+        <article class="card"><div class="body">
+          <h3>Angina sem obstrução: microvascular e vasoespástica</h3>
+          <p>Muitos pacientes têm dor no peito mesmo com as artérias limpas no cateterismo. Testes de função coronariana, feitos no mesmo exame, mostram se a causa está nos pequenos vasos do coração ou em espasmos das artérias. Com o diagnóstico certo, o tratamento passa a ser direcionado.</p>
+        </div></article>
+        <article class="card"><div class="body">
+          <h3>Oclusão percutânea de defeitos congênitos</h3>
+          <p>Fechamento por cateter de comunicações que não deveriam existir no coração, como CIA, forame oval patente (FOP) e canal arterial. Uma prótese é posicionada pela virilha e fecha o defeito, sem cirurgia e com alta rápida.</p>
+        </div></article>
+        <article class="card"><div class="body">
+          <h3>Hipertensão pulmonar: investigação e tratamento</h3>
+          <p>O cateterismo direito é o exame que confirma a hipertensão pulmonar e ajuda a descobrir a causa. Quando a causa pode ser tratada por cateter, como na doença tromboembólica crônica, fazemos o tratamento com a angioplastia das artérias pulmonares.</p>
+        </div></article>
+      </div>
+    </div>
 
     <div class="tabs" role="tablist" aria-label="Procedimentos por grupo">
       <button class="tab" role="tab" id="t-diag" aria-controls="p-diag" aria-selected="true">Diagnóstico<small>10</small></button>
@@ -952,7 +1000,7 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
     <ol class="steps stagger" style="list-style:none;margin:0;padding:0">
       <li class="step"><span class="n">01</span><h3>Conversa antes</h3><p>Um dos médicos da equipe fala com você sobre o preparo, os cuidados e o que vai acontecer na sala.</p></li>
       <li class="step"><span class="n">02</span><h3>Horário que cabe na sua rotina</h3><p>Exames eletivos podem ser marcados à noite e nos fins de semana, combinando com você e com o seu cardiologista.</p></li>
-      <li class="step"><span class="n">03</span><h3>O procedimento</h3><p>No laboratório de hemodinâmica, pelo punho sempre que possível. Se houver dúvida sobre a necessidade de stent, a FFR é medida ali mesmo.</p></li>
+      <li class="step"><span class="n">03</span><h3>O procedimento</h3><p>No laboratório de hemodinâmica, pelo punho sempre que possível. Se houver dúvida sobre a necessidade de stent, a FFR é medida ali mesmo, no mesmo exame.</p></li>
       <li class="step"><span class="n">04</span><h3>Depois</h3><p>Você sai com as orientações de cuidado em casa, e o seu cardiologista recebe o retorno da equipe.</p></li>
     </ol>
   </div>
@@ -1030,14 +1078,14 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
     <div class="sec-head sr">
       <span class="label">Para médicos</span>
       <h2>Para o cardiologista <span class="dim">que encaminha.</span></h2>
-      <p>O paciente continua sendo seu. A gente conversa sobre o caso antes do procedimento e dá o retorno depois.</p>
+      <p>O paciente continua sendo seu. Conversamos sobre o caso antes do procedimento, discutimos a estratégia com você e devolvemos o paciente com relatório completo e plano de seguimento.</p>
     </div>
     <div class="med-grid stagger">
-      <div class="med"><h3>FFR no mesmo tempo do diagnóstico</h3><p>Quando a medida define a conduta, fazemos FFR, iFR ou RFR durante o cateterismo diagnóstico, sem segundo procedimento.</p></div>
-      <div class="med"><h3>IVUS e OCT</h3><p>Imagem intravascular para planejar a angioplastia e otimizar o resultado do stent.</p></div>
-      <div class="med"><h3>Via radial como padrão</h3><p>Sempre que a anatomia permite. Menos sangramento e mobilização mais cedo.</p></div>
-      <div class="med"><h3>Suporte cirúrgico sem transporte</h3><p>No Contorno, se houver necessidade de conversão cirúrgica, o procedimento continua na mesma sala.</p></div>
-      <div class="med"><h3>Angiógrafos de última geração</h3><p>Protocolos de aquisição pensados para a melhor imagem com a menor dose de radiação.</p></div>
+      <div class="med"><h3>FFR no mesmo tempo do diagnóstico</h3><p>Quando a medida define a conduta, fazemos FFR ou iFR durante o cateterismo, sem um segundo procedimento.</p></div>
+      <div class="med"><h3>IVUS e OCT</h3><p>Imagem dentro do vaso para planejar a angioplastia e confirmar o resultado do stent.</p></div>
+      <div class="med"><h3>Via radial como padrão</h3><p>Sempre que a anatomia permite. Menos sangramento e alta mais cedo.</p></div>
+      <div class="med"><h3>4 unidades na rede Mater Dei</h3><p>Contorno, Santo Agostinho, Betim-Contagem e Nova Lima. O paciente faz o procedimento na unidade mais próxima, com a mesma equipe.</p></div>
+      <div class="med"><h3>Equipamentos de última geração</h3><p>Angiógrafos modernos e protocolos de baixa dose, para a melhor imagem com a menor radiação.</p></div>
       <div class="med"><h3>Agenda estendida</h3><p>Exames eletivos à noite e nos fins de semana, e contato direto com o médico que vai fazer o procedimento.</p></div>
     </div>
     <div class="med-cta">
@@ -1052,15 +1100,16 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
 <section class="sec" id="unidades">
   <div class="wrap">
     <div class="sec-head sr">
-      <span class="label">Unidades</span>
-      <h2>Quatro unidades, <span class="dim">uma equipe.</span></h2>
+      <span class="label">Nossa história</span>
+      <h2>Doze anos crescendo <span class="dim">junto com a rede Mater Dei.</span></h2>
     </div>
     <div class="timeline sr">
-      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Contorno</h3><span class="yr label">Desde 2014</span><p>Av. do Contorno, 9000, Barro Preto, Belo Horizonte.</p></div>
-      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Betim-Contagem</h3><span class="yr label">Desde 2019</span><p>Unidade construída já com o serviço de hemodinâmica.</p></div>
-      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Santo Agostinho</h3><span class="yr label">Desde 2022</span><p>Belo Horizonte, região Centro-Sul.</p></div>
-      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Nova Lima</h3><span class="yr label">Desde 2024</span><p>Serviço de hemodinâmica inaugurado em 2024.</p></div>
+      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Contorno</h3><span class="yr label">Desde 2014</span><p>Onde tudo começou. A equipe assume a hemodinâmica do hospital, no Barro Preto, em Belo Horizonte.</p></div>
+      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Betim-Contagem</h3><span class="yr label">Desde 2019</span><p>A primeira unidade fora de BH, levando o serviço à região metropolitana desde a inauguração do hospital.</p></div>
+      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Santo Agostinho</h3><span class="yr label">Desde 2022</span><p>Incorporação da equipe à unidade Santo Agostinho, na região Centro-Sul de Belo Horizonte.</p></div>
+      <div class="unit"><span class="marker" aria-hidden="true"></span><h3>Mater Dei Nova Lima</h3><span class="yr label">Desde 2024</span><p>Serviço de hemodinâmica inaugurado em 2024, completando as quatro unidades.</p></div>
     </div>
+    <p class="fecho sr">Hoje são quatro laboratórios e uma só equipe, com o mesmo cuidado em cada um.</p>
   </div>
 </section>
 
@@ -1070,10 +1119,11 @@ footer.site{background:var(--mist);border-top:1px solid var(--line);padding:80px
     <div class="sec-head sr"><span class="label">Dúvidas frequentes</span><h2>Antes de marcar.</h2></div>
     <div class="faq">
       <details><summary>Qual a diferença entre cateterismo e angioplastia?<span class="pm" aria-hidden="true"></span></summary><p>O cateterismo é o exame: mostra onde estão as obstruções nas artérias do coração. A angioplastia é o tratamento: abre a artéria com um balão e, na maioria das vezes, deixa um stent no lugar. Quando o cateterismo encontra uma obstrução que precisa ser tratada, os dois podem acontecer no mesmo procedimento.</p></details>
-      <details><summary>O exame é feito pelo braço ou pela virilha?<span class="pm" aria-hidden="true"></span></summary><p>Sempre que possível, pelo punho (artéria radial). Essa via tem menos risco de sangramento. Em alguns casos, como na TAVI, a virilha é necessária por causa do tamanho do material.</p></details>
+      <details><summary>O exame é feito pelo braço ou pela virilha?<span class="pm" aria-hidden="true"></span></summary><p>Sempre que possível, pelo punho (artéria radial). Essa via tem menos risco de sangramento e permite que você se levante mais cedo. Em alguns casos, como na TAVI, a virilha é necessária por causa do tamanho do material.</p></details>
       <details><summary>Posso marcar à noite ou no fim de semana?<span class="pm" aria-hidden="true"></span></summary><p>Sim. Exames eletivos podem ser agendados fora do horário comercial, combinando com você e com o seu cardiologista.</p></details>
-      <details><summary>E a radiação?<span class="pm" aria-hidden="true"></span></summary><p>Os angiógrafos são de última geração, com protocolos pensados para garantir a melhor imagem com a menor incidência de radiação.</p></details>
-      <details><summary>Quem me explica o preparo?<span class="pm" aria-hidden="true"></span></summary><p>Um dos médicos da equipe, os mesmos que fazem o procedimento. Mande uma mensagem pelo WhatsApp e a gente combina o melhor horário para conversar.</p></details>
+      <details><summary>E a radiação?<span class="pm" aria-hidden="true"></span></summary><p>Nossos angiógrafos são de última geração e trabalham com protocolos de baixa dose. O objetivo é sempre a melhor imagem com a menor radiação possível, para você e para a equipe.</p></details>
+      <details><summary>Quem me explica o preparo?<span class="pm" aria-hidden="true"></span></summary><p>Um dos médicos da equipe, os mesmos que fazem o procedimento. Mande uma mensagem pelo WhatsApp e combinamos o melhor horário para conversar.</p></details>
+      <details><summary>Em qual unidade vou fazer o exame?<span class="pm" aria-hidden="true"></span></summary><p>Na unidade Mater Dei que for mais conveniente para você: Contorno, Santo Agostinho, Betim-Contagem ou Nova Lima. A equipe é a mesma em todas.</p></details>
     </div>
   </div>
 </section>
